@@ -6,6 +6,6 @@ services:
     ports:
       - "8191:8191"
     volumes:
-      - ./db:/db
+      - ./word.db:/word.db
     command: sqlite3 /db/word.db
     tty: true
