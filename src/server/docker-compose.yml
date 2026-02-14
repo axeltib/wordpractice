@@ -1,0 +1,11 @@
+services:
+  words-db:
+    image: keinos/sqlite3:latest
+    container_name: sqlite
+    hostname: sqlite.words
+    ports:
+      - "8191:8191"
+    volumes:
+      - ./db:/db
+    command: sqlite3 /db/word.db
+    tty: true
